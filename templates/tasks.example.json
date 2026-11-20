@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "updated_at": "2026-11-19T23:15:00-03:00",
+  "timezone": "America/Cordoba",
+  "rules": [
+    "同一时间每个模型只认领一条任务；认领后把 status 改为 claimed 或 in_progress，并填写 claim。",
+    "禁止删减、改写任务的 title、acceptance、steps。只能改 status、claim、evidence、notes、verified 字段。",
+    "只有在补齐 evidence 且 verified 不为 untested 时，才可以把 status 改为 done，并把 verified 设为 true。",
+    "被否决的任务改 status=rejected，并填写 rejected_reason，同时在 DECISIONS.md 追加 N-xxx。"
+  ],
+  "tasks": [
+    {
+      "id": "T001",
+      "title": "在这里写一条可独立完成的任务",
+      "status": "todo",
+      "claim": {
+        "by": null,
+        "at": null,
+        "note": null
+      },
+      "blocked_by": [],
+      "acceptance": [
+        "用一条可复现的命令或明确的产物路径证明完成"
+      ],
+      "steps": [
+        "第一步",
+        "第二步"
+      ],
+      "evidence": [],
+      "verified": false,
+      "verified_how": "untested",
+      "notes": "",
+      "rejected_reason": null
+    }
+  ]
+}
